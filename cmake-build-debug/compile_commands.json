@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/bhbhchoi/ros/dev_ws/src/SP-A-LOAM/cmake-build-debug",
+  "command": "/usr/bin/c++ -DDISABLE_LIBUSB_1_0 -DDISABLE_PCAP -DDISABLE_PNG -DSP_A_LOAM_EXPORTS -Dqh_QHpointer -DvtkRenderingContext2D_AUTOINIT=\"1(vtkRenderingContextOpenGL2)\" -DvtkRenderingCore_AUTOINIT=\"3(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingOpenGL2)\" -I/home/bhbhchoi/ros/dev_ws/src/SP-A-LOAM/include -isystem /usr/include/vtk-7.1 -isystem /usr/include/freetype2 -isystem /usr/include/opencv4 -isystem /usr/include/pcl-1.10 -isystem /usr/include/eigen3 -isystem /usr/include/ni -isystem /usr/include/openni2 -O3 -Wall -g -fPIC -fdiagnostics-color=always -std=gnu++14 -o src/CMakeFiles/SP_A_LOAM.dir/scanRegistration/scanRegistration.cpp.o -c /home/bhbhchoi/ros/dev_ws/src/SP-A-LOAM/src/scanRegistration/scanRegistration.cpp",
+  "file": "/home/bhbhchoi/ros/dev_ws/src/SP-A-LOAM/src/scanRegistration/scanRegistration.cpp"
+},
+{
+  "directory": "/home/bhbhchoi/ros/dev_ws/src/SP-A-LOAM/cmake-build-debug",
+  "command": "/usr/bin/c++ -DDISABLE_LIBUSB_1_0 -DDISABLE_PCAP -DDISABLE_PNG -DSP_A_LOAM_EXPORTS -Dqh_QHpointer -DvtkRenderingContext2D_AUTOINIT=\"1(vtkRenderingContextOpenGL2)\" -DvtkRenderingCore_AUTOINIT=\"3(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingOpenGL2)\" -I/home/bhbhchoi/ros/dev_ws/src/SP-A-LOAM/include -isystem /usr/include/vtk-7.1 -isystem /usr/include/freetype2 -isystem /usr/include/opencv4 -isystem /usr/include/pcl-1.10 -isystem /usr/include/eigen3 -isystem /usr/include/ni -isystem /usr/include/openni2 -O3 -Wall -g -fPIC -fdiagnostics-color=always -std=gnu++14 -o src/CMakeFiles/SP_A_LOAM.dir/scanRegistration/scanRegistrationOption.cpp.o -c /home/bhbhchoi/ros/dev_ws/src/SP-A-LOAM/src/scanRegistration/scanRegistrationOption.cpp",
+  "file": "/home/bhbhchoi/ros/dev_ws/src/SP-A-LOAM/src/scanRegistration/scanRegistrationOption.cpp"
+}
+]

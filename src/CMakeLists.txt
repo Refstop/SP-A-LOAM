@@ -1,0 +1,20 @@
+set(scanRegistration_SOURCES
+        scanRegistration/scanRegistration.cpp
+        scanRegistration/scanRegistrationOption.cpp)
+
+set(laserOdometry_SOURCES
+        laserOdometry/laserOdometry.cpp)
+
+set(laserMapping_SOURCES
+        laserMapping/laserMapping.cpp)
+
+set(kittiHelper_SOURCES
+        kittiHelper/kittiHelper.cpp)
+
+
+add_library(${PROJECT_NAME} SHARED
+        ${scanRegistration_SOURCES})
+target_link_libraries(${PROJECT_NAME}
+        ${OpenCV_LIBRARIES}
+        ${PCL_LIBRARIES}
+        ${PCL_CONVERSIONS_LIBRARIES})

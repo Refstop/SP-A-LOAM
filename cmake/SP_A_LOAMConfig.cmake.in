@@ -1,0 +1,5 @@
+@PACKAGE_INIT@
+
+include(${SP_A_LOAM_DIR}/SP_A_LOAMTargets.cmake)
+
+check_required_components(@PROJECT_NAME@)
