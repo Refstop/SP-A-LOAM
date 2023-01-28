@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="2">
+
+    <name>SP_A_LOAM</name>
+    <version>1.0.0</version>
+    <description>
+        Librarizing of SC-A-LOAM for SPAROLab.
+    </description>
+
+    <author     email="bhbhchoi@gmail.com">Refstop</author>
+    <maintainer email="bhbhchoi@gmail.com">Refstop</maintainer>
+
+    <license>BSD</license>
+
+    <buildtool_depend>cmake</buildtool_depend>
+
+    <build_depend>eigen</build_depend>
+
+    <export>
+        <build_type>cmake</build_type>
+    </export>
+
+</package>

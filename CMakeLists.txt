@@ -7,7 +7,10 @@ set(CMAKE_BUILD_TYPE "Release")
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_FLAGS_RELEASE "-O3 -Wall -g")
 set(SP_A_LOAM_VERSION 1.0.0)
-set(ConfigPackageLocation lib/cmake/${CMAKE_PROJECT_NAME})
+
+include(GNUInstallDirs)
+message(${CMAKE_INSTALL_LIBDIR})
+set(ConfigPackageLocation ${CMAKE_INSTALL_LIBDIR}/${CMAKE_PROJECT_NAME}/cmake)
 
 find_package(OpenCV REQUIRED)
 find_package(PCL REQUIRED)

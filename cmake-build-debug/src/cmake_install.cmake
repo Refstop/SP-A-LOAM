@@ -1,4 +1,4 @@
-# Install script for directory: /home/bhbhchoi/ros/dev_ws/src/SP-A-LOAM/src
+# Install script for directory: /home/bhbhchoi/ros/catkin_ws/src/SP-A-LOAM/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

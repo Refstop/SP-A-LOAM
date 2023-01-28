@@ -1,4 +1,4 @@
-# Install script for directory: /home/bhbhchoi/ros/dev_ws/src/SP-A-LOAM
+# Install script for directory: /home/bhbhchoi/ros/catkin_ws/src/SP-A-LOAM
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,7 +49,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libSP_A_LOAM.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/bhbhchoi/ros/dev_ws/src/SP-A-LOAM/cmake-build-debug/src/libSP_A_LOAM.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/bhbhchoi/ros/catkin_ws/src/SP-A-LOAM/cmake-build-debug/src/libSP_A_LOAM.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libSP_A_LOAM.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libSP_A_LOAM.so")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -62,19 +62,19 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/bhbhchoi/ros/dev_ws/src/SP-A-LOAM/include/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/bhbhchoi/ros/catkin_ws/src/SP-A-LOAM/include/")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/SP_A_LOAM/SP_A_LOAMTargets.cmake")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/SP_A_LOAM/cmake/SP_A_LOAMTargets.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
-         "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/SP_A_LOAM/SP_A_LOAMTargets.cmake"
-         "/home/bhbhchoi/ros/dev_ws/src/SP-A-LOAM/cmake-build-debug/CMakeFiles/Export/7f6e65519bc985c2cae7a15417e67729/SP_A_LOAMTargets.cmake")
+         "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/SP_A_LOAM/cmake/SP_A_LOAMTargets.cmake"
+         "/home/bhbhchoi/ros/catkin_ws/src/SP-A-LOAM/cmake-build-debug/CMakeFiles/Export/7278298f6b8fb7ad45120ba9fc66b493/SP_A_LOAMTargets.cmake")
     if(_cmake_export_file_changed)
-      file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/SP_A_LOAM/SP_A_LOAMTargets-*.cmake")
+      file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/SP_A_LOAM/cmake/SP_A_LOAMTargets-*.cmake")
       if(_cmake_old_config_files)
         string(REPLACE ";" ", " _cmake_old_config_files_text "${_cmake_old_config_files}")
-        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/SP_A_LOAM/SP_A_LOAMTargets.cmake\" will be replaced.  Removing files [${_cmake_old_config_files_text}].")
+        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/SP_A_LOAM/cmake/SP_A_LOAMTargets.cmake\" will be replaced.  Removing files [${_cmake_old_config_files_text}].")
         unset(_cmake_old_config_files_text)
         file(REMOVE ${_cmake_old_config_files})
       endif()
@@ -82,22 +82,22 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/SP_A_LOAM" TYPE FILE FILES "/home/bhbhchoi/ros/dev_ws/src/SP-A-LOAM/cmake-build-debug/CMakeFiles/Export/7f6e65519bc985c2cae7a15417e67729/SP_A_LOAMTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/SP_A_LOAM/cmake" TYPE FILE FILES "/home/bhbhchoi/ros/catkin_ws/src/SP-A-LOAM/cmake-build-debug/CMakeFiles/Export/7278298f6b8fb7ad45120ba9fc66b493/SP_A_LOAMTargets.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/SP_A_LOAM" TYPE FILE FILES "/home/bhbhchoi/ros/dev_ws/src/SP-A-LOAM/cmake-build-debug/CMakeFiles/Export/7f6e65519bc985c2cae7a15417e67729/SP_A_LOAMTargets-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/SP_A_LOAM/cmake" TYPE FILE FILES "/home/bhbhchoi/ros/catkin_ws/src/SP-A-LOAM/cmake-build-debug/CMakeFiles/Export/7278298f6b8fb7ad45120ba9fc66b493/SP_A_LOAMTargets-release.cmake")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/SP_A_LOAM" TYPE FILE FILES
-    "/home/bhbhchoi/ros/dev_ws/src/SP-A-LOAM/cmake-build-debug/lib/cmake/SP_A_LOAM/SP_A_LOAMConfig.cmake"
-    "/home/bhbhchoi/ros/dev_ws/src/SP-A-LOAM/cmake-build-debug/lib/cmake/SP_A_LOAM/SP_A_LOAMConfigVersion.cmake"
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/SP_A_LOAM/cmake" TYPE FILE FILES
+    "/home/bhbhchoi/ros/catkin_ws/src/SP-A-LOAM/cmake-build-debug/lib/SP_A_LOAM/cmake/SP_A_LOAMConfig.cmake"
+    "/home/bhbhchoi/ros/catkin_ws/src/SP-A-LOAM/cmake-build-debug/lib/SP_A_LOAM/cmake/SP_A_LOAMConfigVersion.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/bhbhchoi/ros/dev_ws/src/SP-A-LOAM/cmake-build-debug/src/cmake_install.cmake")
+  include("/home/bhbhchoi/ros/catkin_ws/src/SP-A-LOAM/cmake-build-debug/src/cmake_install.cmake")
 
 endif()
 
@@ -109,5 +109,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/bhbhchoi/ros/dev_ws/src/SP-A-LOAM/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/bhbhchoi/ros/catkin_ws/src/SP-A-LOAM/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
