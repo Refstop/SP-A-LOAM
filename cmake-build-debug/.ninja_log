@@ -1,6 +1,0 @@
-# ninja log v5
-1	182	1674792716323447966	build.ninja	4aa46225a1d5efd9
-3	1541	1674716167995571667	src/CMakeFiles/scanRegistrationLIB.dir/scanRegistration/scanRegistrationOption.cpp.o	b8990436e3ea1165
-4806	5785	1674716172235557893	SP_A_LOAM	69556f8b4d7cbb21
-3	5384	1674716164899581738	src/CMakeFiles/scanRegistrationLIB.dir/scanRegistration/scanRegistration.cpp.o	ccd698f1f3108589
-1541	4805	1674716171255561073	src/libscanRegistrationLIB.so	852a4e5dac4c5b57

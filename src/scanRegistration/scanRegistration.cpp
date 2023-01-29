@@ -102,9 +102,9 @@ void scanRegistration::laserCloudHandler(pcl::PointCloud<pcl::PointXYZ> laserClo
     // 논문에서의 c(curvature)를 계산하는 부분
     // index 5~cloudSize - 6의 point를 size 10의 window로 훑는다.
     for(int i = 5; i < cloudSize - 5; i++) {
-        float diffX = laserCloud_->points[i - 5].x + laserCloud_->points[i - 4].x + laserCloud_->points[i - 3].x + laserCloud_->points[i - 2].x + laserCloud_->points[i - 1].x + laserCloud_->points[i].x + laserCloud_->points[i + 1].x + laserCloud_->points[i + 2].x + laserCloud_->points[i + 3].x + laserCloud_->points[i + 4].x + laserCloud_->points[i + 5].x;
-        float diffY = laserCloud_->points[i - 5].y + laserCloud_->points[i - 4].y + laserCloud_->points[i - 3].y + laserCloud_->points[i - 2].y + laserCloud_->points[i - 1].y + laserCloud_->points[i].y + laserCloud_->points[i + 1].y + laserCloud_->points[i + 2].y + laserCloud_->points[i + 3].y + laserCloud_->points[i + 4].y + laserCloud_->points[i + 5].y;
-        float diffZ = laserCloud_->points[i - 5].z + laserCloud_->points[i - 4].z + laserCloud_->points[i - 3].z + laserCloud_->points[i - 2].z + laserCloud_->points[i - 1].z + laserCloud_->points[i].z + laserCloud_->points[i + 1].z + laserCloud_->points[i + 2].z + laserCloud_->points[i + 3].z + laserCloud_->points[i + 4].z + laserCloud_->points[i + 5].z;
+        float diffX = laserCloud_->points[i - 5].x + laserCloud_->points[i - 4].x + laserCloud_->points[i - 3].x + laserCloud_->points[i - 2].x + laserCloud_->points[i - 1].x - 10 * laserCloud_->points[i].x + laserCloud_->points[i + 1].x + laserCloud_->points[i + 2].x + laserCloud_->points[i + 3].x + laserCloud_->points[i + 4].x + laserCloud_->points[i + 5].x;
+        float diffY = laserCloud_->points[i - 5].y + laserCloud_->points[i - 4].y + laserCloud_->points[i - 3].y + laserCloud_->points[i - 2].y + laserCloud_->points[i - 1].y - 10 * laserCloud_->points[i].y + laserCloud_->points[i + 1].y + laserCloud_->points[i + 2].y + laserCloud_->points[i + 3].y + laserCloud_->points[i + 4].y + laserCloud_->points[i + 5].y;
+        float diffZ = laserCloud_->points[i - 5].z + laserCloud_->points[i - 4].z + laserCloud_->points[i - 3].z + laserCloud_->points[i - 2].z + laserCloud_->points[i - 1].z - 10 * laserCloud_->points[i].z + laserCloud_->points[i + 1].z + laserCloud_->points[i + 2].z + laserCloud_->points[i + 3].z + laserCloud_->points[i + 4].z + laserCloud_->points[i + 5].z;
 
         cloudCurvature_[i] = diffX * diffX + diffY * diffY + diffZ * diffZ;
         cloudSortInd_[i] = i;
@@ -137,7 +137,7 @@ void scanRegistration::laserCloudHandler(pcl::PointCloud<pcl::PointXYZ> laserClo
                     // largestPickedNum의 의미는?
                     // cloudCurvature_[ind]가 큰 것을 pick할 때마다 올려주는 수
                     largestPickedNum++;
-                    if(largestPickedNum >= 2) {
+                    if(largestPickedNum <= 2) {
                         // label의 의미:
                         // 2: best quality edge point의 index
                         // 1: 그다음으로 quality 괜찮은 edge point의 index
@@ -189,7 +189,7 @@ void scanRegistration::laserCloudHandler(pcl::PointCloud<pcl::PointXYZ> laserClo
                     surfPointsFlat_->push_back(laserCloud_->points[ind]);
 
                     smallestPickedNum++;
-                    if(smallestPickedNum <= 4) {
+                    if(smallestPickedNum >= 4) {
                         break;
                     }
                     cloudNeighborPicked_[ind] = 1;
