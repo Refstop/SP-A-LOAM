@@ -8,16 +8,16 @@
 
 class scanRegistrationOption {
 public:
-    scanRegistrationOption(std::string LIDAR_TYPE, bool verbose);
-    scanRegistrationOption(std::string LIDAR_TYPE, double MINIMUM_RANGE, bool verbose);
+    scanRegistrationOption(std::string LIDAR_TYPE = "VLP16", bool verbose = true);
+    scanRegistrationOption(std::string LIDAR_TYPE = "VLP16", double MINIMUM_RANGE = 0.1, bool verbose = true);
     const double scanPeriod;
     const int systemDelay;
     int systemInitCount;
     bool systemInited;
     int N_SCANS;
     double MINIMUM_RANGE;
-    bool verbose;
     std::string LIDAR_TYPE;
+    const bool verbose;
 };
 typedef scanRegistrationOption srOption;
 

@@ -30,11 +30,11 @@ using std::cos;
 class scanRegistration {
 public:
     scanRegistration(srOption option);
-    pcl::PointCloud<PointType> getLaserCloud() { return *laserCloud_; }
-    pcl::PointCloud<PointType> getCornerPointsSharp() { return *cornerPointsSharp_; }
-    pcl::PointCloud<PointType> getCornerPointsLessSharp() { return *cornerPointsLessSharp_; }
-    pcl::PointCloud<PointType> getSurfPointsFlat() { return *surfPointsFlat_; }
-    pcl::PointCloud<PointType> getSurfPointsLessFlat() { return *surfPointsLessFlat_; }
+    pcl::PointCloud<PointType>::Ptr getLaserCloud() { return laserCloud_; }
+    pcl::PointCloud<PointType>::Ptr getCornerPointsSharp() { return cornerPointsSharp_; }
+    pcl::PointCloud<PointType>::Ptr getCornerPointsLessSharp() { return cornerPointsLessSharp_; }
+    pcl::PointCloud<PointType>::Ptr getSurfPointsFlat() { return surfPointsFlat_; }
+    pcl::PointCloud<PointType>::Ptr getSurfPointsLessFlat() { return surfPointsLessFlat_; }
 
     // src/scanRegistration.cpp의 laserHandler를 작은 함수들로 쪼갠다(나중)
     void laserCloudHandler(pcl::PointCloud<pcl::PointXYZ> laserCloudIn);

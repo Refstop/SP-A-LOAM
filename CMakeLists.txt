@@ -15,12 +15,14 @@ set(ConfigPackageLocation ${CMAKE_INSTALL_LIBDIR}/${CMAKE_PROJECT_NAME}/cmake)
 find_package(OpenCV REQUIRED)
 find_package(PCL REQUIRED)
 find_package(pcl_conversions REQUIRED)
+find_package(Ceres REQUIRED)
 
 include_directories(
         include
         ${OpenCV_INCLUDE_DIRS}
         ${PCL_INCLUDE_DIRS}
-        ${PCL_CONVERSIONS_INCLUDE_DIRS})
+        ${PCL_CONVERSIONS_INCLUDE_DIRS}
+        ${CERES_INCLUDE_DIRS})
 
 add_subdirectory(src)
 
@@ -74,6 +76,7 @@ configure_package_config_file(
          ${${PROJECT_NAME}_INSTALL_DIR}/${PROJECT_NAME}Config.cmake
          ${${PROJECT_NAME}_INSTALL_DIR}/${PROJECT_NAME}ConfigVersion.cmake
          DESTINATION ${ConfigPackageLocation})
+
 #add_executable(${PROJECT_NAME} src/main.cpp)
 #target_link_libraries(${PROJECT_NAME}
 #        ${PROJECT_NAME})
