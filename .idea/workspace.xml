@@ -37,18 +37,18 @@
       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" NO_GENERATOR="true">
         <ADDITIONAL_GENERATION_ENVIRONMENT>
           <envs>
-            <env name="ROS_ROOT" value="" />
-            <env name="ROS_MASTER_URI" value="" />
-            <env name="ROS_PACKAGE_PATH" value="" />
-            <env name="CMAKE_PREFIX_PATH" value="" />
-            <env name="PKG_CONFIG_PATH" value="" />
-            <env name="PYTHONPATH" value="/opt/ros/humble/lib/python/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages" />
-            <env name="LD_LIBRARY_PATH" value="/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib" />
-            <env name="PATH" value="/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin" />
-            <env name="ROS_DISTRO" value="humble" />
+            <env name="ROS_ROOT" value="/opt/ros/noetic/share/ros" />
+            <env name="ROS_MASTER_URI" value="http://localhost:11311" />
+            <env name="ROS_PACKAGE_PATH" value="$PROJECT_DIR$/../SP-A-LOAM:/root/docker_ws/ros/catkin_ws/src/LOAM-Family_Study/SC-A-LOAM:/root/docker_ws/ros/catkin_ws/src/sp_a_loam_ros:/opt/ros/noetic/share" />
+            <env name="CMAKE_PREFIX_PATH" value="$PROJECT_DIR$/../../devel:/opt/ros/noetic" />
+            <env name="PKG_CONFIG_PATH" value="$PROJECT_DIR$/../../devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig" />
+            <env name="PYTHONPATH" value="/opt/ros/noetic/lib/python3/dist-packages" />
+            <env name="LD_LIBRARY_PATH" value="$PROJECT_DIR$/../../devel/lib:/opt/ros/noetic/lib" />
+            <env name="PATH" value="/opt/ros/noetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin" />
+            <env name="ROS_DISTRO" value="noetic" />
             <env name="ROS_PYTHON_VERSION" value="3" />
-            <env name="ROS_LOCALHOST_ONLY" value="0" />
-            <env name="ROS_VERSION" value="2" />
+            <env name="ROS_LOCALHOST_ONLY" value="" />
+            <env name="ROS_VERSION" value="1" />
           </envs>
         </ADDITIONAL_GENERATION_ENVIRONMENT>
       </configuration>
@@ -103,12 +103,12 @@
       <window_info id="Space Code Reviews" order="0" />
       <window_info id="Bookmarks" order="1" side_tool="true" />
       <window_info id="Pull Requests" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.12161459" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.08531961" />
       <window_info id="Commit" order="4" />
       <window_info id="Structure" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Python Packages" order="1" />
-      <window_info active="true" anchor="bottom" id="CMake" order="2" visible="true" weight="0.34084374" />
+      <window_info active="true" anchor="bottom" id="CMake" order="2" visible="true" weight="0.32824802" />
       <window_info anchor="bottom" id="File Transfer" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="4" />
       <window_info anchor="bottom" id="Problems View" order="5" />
@@ -124,6 +124,11 @@
   </component>
   <component name="RunManager" selected="CMake Application.geometry_msgs_generate_messages_cpp">
     <configuration name="SP_A_LOAM" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SP_A_LOAM" TARGET_NAME="SP_A_LOAM" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -255,6 +260,13 @@
       <workItem from="1675401460966" duration="1000" />
       <workItem from="1675435190475" duration="1711000" />
       <workItem from="1675598442631" duration="599000" />
+      <workItem from="1676015113694" duration="599000" />
+      <workItem from="1676020202822" duration="27000" />
+      <workItem from="1676020286600" duration="599000" />
+      <workItem from="1677211278860" duration="138000" />
+      <workItem from="1677211434892" duration="36000" />
+      <workItem from="1677211528479" duration="1164000" />
+      <workItem from="1677212760686" duration="600000" />
     </task>
     <servers />
   </component>

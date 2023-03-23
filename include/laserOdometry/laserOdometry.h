@@ -27,9 +27,9 @@ public:
     void setCornerPointsLessSharp(double timeStamp, pcl::PointCloud<PointType> &cornerPointsLessSharp);
     void setSurfPointsFlat(double timeStamp, pcl::PointCloud<PointType> &surfPointsFlat);
     void setSurfPointsLessFlat(double timeStamp, pcl::PointCloud<PointType> &surfPointsLessFlat);
-    PointTypeStamped::Ptr getLaserCloudCornerLast() { return laserCloudCornerLast_; }
-    PointTypeStamped::Ptr getLaserCloudSurfLast() { return laserCloudSurfLast_; }
-    PointTypeStamped::Ptr getLaserCloudFullRes() { return laserCloudFullRes_; }
+    PointCloudStamped::Ptr getLaserCloudCornerLast() { return laserCloudCornerLast_; }
+    PointCloudStamped::Ptr getLaserCloudSurfLast() { return laserCloudSurfLast_; }
+    PointCloudStamped::Ptr getLaserCloudFullRes() { return laserCloudFullRes_; }
 
 
     Eigen::Quaterniond getOdomRotation() { return q_w_curr_; }
@@ -38,13 +38,14 @@ public:
     bool run();
 
 private:
+    void transformToStart(PointType const *const pi, PointType *const po);
     double pointDistance(const PointType point1, const PointType point2);
-    void findCornerIndices(const PointType pointSel, int &closestPointInd, int &minPointInd);
-    void findSurfIndices(const PointType pointSel, int &closestPointInd, int &minPointInd1, int &minPointInd2);
+    void findCornerIndices(PointType const *const pi, int &closestPointInd, int &minPointInd2);
+    void findSurfIndices(PointType const *const pi, int &closestPointInd, int &minPointInd2, int &minPointInd3);
     loOption opt_;
-    int corner_correspondence_, plane_correspondence_, laserCloudCornerLastNum_, laserCloudSurfLastNum_;
+    int corner_correspondence_, plane_correspondence_;
     pcl::KdTreeFLANN<PointType>::Ptr kdtreeCornerLast_, kdtreeSurfLast_;
-    PointTypeStamped::Ptr laserCloudCornerLast_, laserCloudSurfLast_, laserCloudFullRes_;
+    PointCloudStamped::Ptr laserCloudCornerLast_, laserCloudSurfLast_, laserCloudFullRes_;
 
     Eigen::Quaterniond q_w_curr_;
     Eigen::Vector3d t_w_curr_;
@@ -55,10 +56,8 @@ private:
     Eigen::Map<Eigen::Quaterniond> q_last_curr_;
     Eigen::Map<Eigen::Vector3d> t_last_curr_;
 
-    std::queue<PointTypeStamped::Ptr> cornerSharpBuf_, cornerLessSharpBuf_, surfFlatBuf_, surfFlatLessBuf_, fullPointsBuf_;
+    std::queue<PointCloudStamped::Ptr> cornerSharpBuf_, cornerLessSharpBuf_, surfFlatBuf_, surfFlatLessBuf_, fullPointsBuf_;
     std::mutex mBuf_;
-
-    int frameCount_;
 };
 
 #endif //SP_A_LOAM_LASERODOMETRY_H

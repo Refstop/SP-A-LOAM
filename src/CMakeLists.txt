@@ -7,7 +7,8 @@ set(laserOdometry_SOURCES
         laserOdometry/laserOdometryOption.cpp)
 
 set(laserMapping_SOURCES
-        laserMapping/laserMapping.cpp)
+        laserMapping/laserMapping.cpp
+        laserMapping/laserMappingOption.cpp)
 
 set(kittiHelper_SOURCES
         kittiHelper/kittiHelper.cpp)
@@ -15,7 +16,8 @@ set(kittiHelper_SOURCES
 
 add_library(${PROJECT_NAME} SHARED
         ${scanRegistration_SOURCES}
-        ${laserOdometry_SOURCES})
+        ${laserOdometry_SOURCES}
+        ${laserMapping_SOURCES})
 target_link_libraries(${PROJECT_NAME}
         ${OpenCV_LIBRARIES}
         ${PCL_LIBRARIES}
