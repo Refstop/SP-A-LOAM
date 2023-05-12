@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  sp_a_loam:
+    image: bhbhchoi/loam_family:noetic
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment: # used inside a docker.
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+    ipc: host
+    shm_size: 512M
+    container_name: sp_a_loam_compose
+    network_mode: host
+    privileged: true
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /dev/dri:/dev/dri #X11 stuff
+      - /dev/snd:/dev/snd #X11 stuff
+      - /home/bhbhchoi/docker_ws:/root/docker_ws
+      # connect devices
+    command: bash
